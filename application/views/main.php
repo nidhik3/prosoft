@@ -378,30 +378,67 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     font-size: 20px;
     letter-spacing: 1px;
   }
+
+/* ncss */
+.image-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: calc(6 * 100% / 3); /* Adjust width based on the number of images */
+}
+
+.slider-container img {
+  width: calc(50% / 3); /* Show 3 images at a time */
+}
+
+/* Arrows styling */
+.prev-arrow, .next-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+    color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+    font-size: 47px;
+}
+
+.prev-arrow {
+  left: 0;
+}
+
+.next-arrow {
+  right: 0;
+}
+
+
+/* ncss */
+
+
+
 </style>
 
-<div class="video-section desk">
-  <div class="splide sp" aria-label="Splide Basic HTML Example">
-    <div class="splide__track">
-      <ul class="splide__list">
-        <li class="splide__slide">
-          <div class="video-overlay" style="position: relative;">
-            <img src="<?php echo base_url(); ?>assets/img/main.png" alt="" style="width: 100%;">
-            <div class="text-overlay">
-              <h1 style="font-weight:600;">Hospital Information<br>Management System</h1>
-              <p class="foot">Feature rich, secure and effective HIMS by Prosoft.</p>
-              <a href="#" class="ban " style="padding:10px 30px;color:#fff;">Get Started →</a>
-            </div>
-          </div>
-        </li>
 
 
-      </ul>
-    </div>
+
+<div class="video-overlay" style="position: relative;">
+  <img src="<?php echo base_url(); ?>assets/img/main.png" alt="" style="width: 100%;">
+  <div class="text-overlay">
+    <h1 style="font-weight:600;">Hospital Information<br>Management System</h1>
+    <p class="foot">Feature rich, secure and effective HIMS by Prosoft.</p>
+    <a href="#" class="ban " style="padding:10px 30px;color:#fff;">Get Started →</a>
   </div>
-
-
 </div>
+
+
+<!-- 
 <div class="mob">
   <div class="video-overlay" style="position: relative;">
     <img src="<?php echo base_url(); ?>assets/img/main.png" alt="" style="width: 100%;">
@@ -412,7 +449,10 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     </div>
   </div>
 
-</div>
+</div> -->
+
+
+
 <section>
   <div class="container">
     <h1 class=" text-center" style="font-weight: 700;">An all in one<br> software solution.</h1>
@@ -462,6 +502,8 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 
   </div>
 </section>
+
+
 <section style="background-color: #F3F6FF;">
   <div class="container mt-5 pb-5">
     <h1 class=" text-center" style="font-weight: 700;">Effortless Integrations for <br>
@@ -475,38 +517,61 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 
   </div>
 </section>
-<section>
-  <div class="container">
-    <h1 class=" text-center" style="font-weight: 700;">About Us </h1>
 
+<section >
+  <div class="row" style="background: #02182E;color:white;">
+    <div class="col-md-7 d-flex justify-content-center align-items-center" >
+      <div class="col-md-9">
+         <h1 class=" text-start" style="font-weight: 700;">About Us </h1>
+      <p>"PROSOFT" is a state certified provider of Healthcare services. PROSOFT are founded in 2007 In INDIA with the idea of easing the stress on Healthcare services and with the goal of providing easy and best solutions forever. Our goal is to create a collaborative plan that will allow the Health sector to maintain security if possible while maintaining their level of independence and functioning.
+      </p>
+      <ul class="pb-3" style="list-style: disc;">
+        <li>High return on investment with low total cost of ownership</li>
+        <li> Solutions to strengthen core functions for greater impact</li>
+        <li> On-time, on-budget project delivery</li>
+      </ul>
 
-
-    <div class="row mt-md-5 mt-3 asds" style="width: 100%;">
-
-      <div class="col-md-7">
-        <img src="assets/img/text.png" alt="">
-        <br><br>
-        <a href="#" class="ban mt-4" style="background-color: #f6aa00;color:#000;">Learn More</a>
+      <a href="#" class="ban mt-4" style="background-color: #f6aa00;color:#000;">Learn More</a>
       </div>
-      <div class="col-md-5"><img src="assets/img/abb.png" alt="" width="100%"></div>
-    </div>
+     
 
+    </div>
+    <div class="col-md-5 p-0">
+     <img src="assets/img/abb.png" alt="" width="100%">
+
+    </div>
   </div>
+
 </section>
+
+
+
+
 <section>
   <div class="container">
     <h1 class=" text-center" style="font-weight: 700;">Trusted by Leading Healthcare<br> Providers Worldwide.</h1>
-
-
-
-    <div class="row mt-md-5 mt-3 asds" style="width: 100%;">
-
-
-      <img src="assets/img/tru.png" alt="" width="100%">
-    </div>
+  </div>
+    <div class="row mt-md-5 mt-3 ">
+      <div class="image-slider">
+        <button class="prev-arrow px-5">❮</button>
+        <div class="slider-container px-5">
+          <img src="assets/img/trust1.png" alt="" style="border: 2px solid black;">
+          <img src="assets/img/trust2.png" alt="" style="border: 2px solid black;">
+          <img src="assets/img/trust3.png" alt="" style="border: 2px solid black;">
+          <img src="assets/img/trust1.png" alt="" style="border: 2px solid black;">
+          <img src="assets/img/trust2.png" alt="" style="border: 2px solid black;">
+          <img src="assets/img/trust3.png" alt="" style="border: 2px solid black;">
+        </div>
+        <button class="next-arrow px-5">❯</button>
+      </div>
+      
+      
+  
 
   </div>
 </section>
+
+<!-- 
 <script>
   var splide = new Splide('.sp', {
     perPage: 1,
@@ -530,6 +595,36 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
   });
 
   splide.mount(window.splide.Extensions);
+
+
+</script> -->
+
+<script>
+let slider = document.querySelector('.slider-container');
+let index = 0;
+let slideWidth = slider.offsetWidth / 3;
+let totalImages = slider.children.length;
+
+document.querySelector('.prev-arrow').addEventListener('click', function() {
+  if (index > 0) {
+    index--;
+  } else {
+    // Jump to the last "group" of images when clicking prev at the start
+    index = totalImages - 3;
+  }
+  slider.style.transform = `translateX(-${index * slideWidth}px)`;
+});
+
+document.querySelector('.next-arrow').addEventListener('click', function() {
+  if (index < totalImages - 3) {
+    index++;
+  } else {
+    // Jump back to the start (for a seamless loop)
+    index = 0;
+  }
+  slider.style.transform = `translateX(-${index * slideWidth}px)`;
+});
+
 
 
 </script>

@@ -110,7 +110,9 @@
               
 
                 </ul>
-            </nav><!-- .navbar -->
+            </nav>
+            
+            <!-- .navbar -->
 
             <i class="mobile-nav-toggle mobile-nav-show bi bi-list col-6 text-end m-0"></i>
 
