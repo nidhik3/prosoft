@@ -419,6 +419,24 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 }
 
 
+.grid-container {
+            background-color: #0b2d50;
+            padding: 20px;
+        }
+        .grid-item {
+            background-color: #123456;
+            color: white;
+            padding: 30px;
+            margin: 15px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        .grid-item img {
+            max-width: 100%;
+            border-radius: 15px;
+        }
+
+
 /* ncss */
 
 
@@ -451,6 +469,37 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 
 </div> -->
 
+
+<div class="container grid-container">
+  <div class="row">
+      <div class="col-md-4 grid-item">
+          <h4><strong>Universal Product.</strong></h4>
+          <p>Global solutions for all healthcare needs, regardless of department or demographics.</p>
+      </div>
+      <div class="col-md-3 grid-item">
+          <!-- Add the image/logo here -->
+          <img src="logo.png" alt="ProSoft Logo">
+      </div>
+      <div class="col-md-4 grid-item">
+          <h4><strong>Update Request.</strong></h4>
+          <p>Fully tailorable and upgradable to meet evolving facility requirements.</p>
+      </div>
+  </div>
+  
+  <div class="row">
+      <div class="col-md-4 grid-item">
+          <h4><strong>Add-on Features.</strong></h4>
+          <p>Unique add-ons for regional demands.</p>
+      </div>
+      <div class="col-md-3 grid-item">
+          <img src="team-photo.jpg" alt="Team Photo">
+      </div>
+      <div class="col-md-4 grid-item">
+          <h4><strong>Set Regulations.</strong></h4>
+          <p>Configurable to operate according to your business’s unique rules.</p>
+      </div>
+  </div>
+</div>
 
 
 <section>
@@ -600,11 +649,6 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 </script> -->
 
 <script>
-let slider = document.querySelector('.slider-container');
-let index = 0;
-let slideWidth = slider.offsetWidth / 3;
-let totalImages = slider.children.length;
-
 document.querySelector('.prev-arrow').addEventListener('click', function() {
   if (index > 0) {
     index--;
@@ -628,3 +672,7 @@ document.querySelector('.next-arrow').addEventListener('click', function() {
 
 
 </script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
