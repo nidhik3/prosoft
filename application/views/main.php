@@ -418,6 +418,33 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
   right: 0;
 }
 
+/* effortles */
+.e-colored {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s ease;
+}
+
+.e-bw {
+  transition: opacity 0.5s ease;
+}
+
+.effortless {
+  position: relative;
+}
+
+.effortless:hover .e-colored {
+  opacity: 1;
+}
+
+.effortless:hover .e-bw {
+  opacity: 0;
+}
+
+/* effortles */
+
 
 .grid-container {
             background-color: #0b2d50;
@@ -485,7 +512,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
           <p>Fully tailorable and upgradable to meet evolving facility requirements.</p>
       </div>
   </div>
-  
+
   <div class="row">
       <div class="col-md-4 grid-item">
           <h4><strong>Add-on Features.</strong></h4>
@@ -558,9 +585,12 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     <h1 class=" text-center" style="font-weight: 700;">Effortless Integrations for <br>
       Seamless Operations.
      </h1>
-    <div class="row mt-md-5 mt-3 asds">
-      <div class="col-md-12">
-        <img src="assets/img/eff.png" alt="" width="100%">
+    <div class="row mt-md-5 mt-3 effortless">
+      <div class="col-md-12 e-bw">
+        <img src="assets/image/eff.png" alt="" width="100%">
+      </div>  
+       <div class="col-md-12 e-colored">
+        <img src="assets/image/eff-clr.png" alt="" width="100%">
       </div>
     </div>
 
