@@ -381,42 +381,36 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 
 /* ncss */
 .image-slider {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
 }
 
 .slider-container {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: calc(6 * 100% / 3); /* Adjust width based on the number of images */
+    display: flex;
+    transition: transform 0.5s ease;
+    width: calc(300px * 6); /* Adjust width based on number of images */
 }
 
 .slider-container img {
-  width: calc(50% / 3); /* Show 3 images at a time */
+    width: 300px; /* Adjust the width based on your design */
+    margin-right: 10px;
 }
 
-/* Arrows styling */
 .prev-arrow, .next-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: transparent;
-    color: black;
+    cursor: pointer;
+    background-color: transparent;
     border: none;
     padding: 10px;
-    cursor: pointer;
-    z-index: 1;
-    font-size: 47px;
+    font-size: 20px;
+    z-index:1;
 }
 
-.prev-arrow {
-  left: 0;
-}
-
-.next-arrow {
-  right: 0;
-}
 
 /* effortles */
 .e-colored {
@@ -497,14 +491,21 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 </div> -->
 
 
+
+<!-- 
+===========
+=========
+grid-container============ -->
+
+<!-- 
 <div class="container grid-container">
   <div class="row">
       <div class="col-md-4 grid-item">
-          <h4><strong>Universal Product.</strong></h4>
-          <p>Global solutions for all healthcare needs, regardless of department or demographics.</p>
+        <p> <strong>Universal Product.</strong>
+          Global solutions for all healthcare needs, regardless of department or demographics.</p>
       </div>
       <div class="col-md-3 grid-item">
-          <!-- Add the image/logo here -->
+          
           <img src="logo.png" alt="ProSoft Logo">
       </div>
       <div class="col-md-4 grid-item">
@@ -526,7 +527,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
           <p>Configurable to operate according to your business’s unique rules.</p>
       </div>
   </div>
-</div>
+</div> -->
 
 
 <section>
@@ -632,21 +633,19 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
   </div>
     <div class="row mt-md-5 mt-3 ">
       <div class="image-slider">
-        <button class="prev-arrow px-5">❮</button>
-        <div class="slider-container px-5">
-          <img src="assets/img/trust1.png" alt="" style="border: 2px solid black;">
-          <img src="assets/img/trust2.png" alt="" style="border: 2px solid black;">
-          <img src="assets/img/trust3.png" alt="" style="border: 2px solid black;">
-          <img src="assets/img/trust1.png" alt="" style="border: 2px solid black;">
-          <img src="assets/img/trust2.png" alt="" style="border: 2px solid black;">
-          <img src="assets/img/trust3.png" alt="" style="border: 2px solid black;">
+        <!-- <button class="prev-arrow px-5">❮</button> -->
+        <div class="slider-container">
+            <img src="assets/img/trust1.png" alt="Image 1" >
+            <img src="assets/img/trust2.png" alt="Image 2" >
+            <img src="assets/img/trust3.png" alt="Image 3" >
+            <img src="assets/img/trust1.png" alt="Image 4" >
+            <img src="assets/img/trust2.png" alt="Image 5" >
+            <img src="assets/img/trust3.png" alt="Image 6" >
         </div>
-        <button class="next-arrow px-5">❯</button>
-      </div>
-      
-      
+        <!-- <button class="next-arrow px-5">❯</button> -->
+    </div>
+    
   
-
   </div>
 </section>
 
@@ -679,27 +678,60 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 </script> -->
 
 <script>
-document.querySelector('.prev-arrow').addEventListener('click', function() {
-  if (index > 0) {
-    index--;
-  } else {
-    // Jump to the last "group" of images when clicking prev at the start
-    index = totalImages - 3;
-  }
-  slider.style.transform = `translateX(-${index * slideWidth}px)`;
+const sliderContainer = document.querySelector('.slider-container');
+const prevButton = document.querySelector('.prev-arrow');
+const nextButton = document.querySelector('.next-arrow');
+
+let currentIndex = 0;
+const imageWidth = 310;  // Adjust to match image width + margin-right
+const totalImages = document.querySelectorAll('.slider-container img').length / 2;  // Since images are duplicated
+
+// Function to move the slider to the next image
+function moveNext() {
+    currentIndex++;
+    sliderContainer.style.transition = 'transform 0.5s ease';
+    sliderContainer.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
+
+    // Reset to the first image after the last one
+    if (currentIndex === totalImages) {
+        setTimeout(() => {
+            sliderContainer.style.transition = 'none'; // Disable animation for the reset
+            currentIndex = 0;
+            sliderContainer.style.transform = `translateX(0)`;
+        }, 500); // Matches the transition duration
+    }
+}
+
+// Function to move the slider to the previous image
+function movePrev() {
+    currentIndex--;
+    if (currentIndex < 0) {
+        sliderContainer.style.transition = 'none'; // Disable animation to reset instantly
+        currentIndex = totalImages - 1; // Jump to the last image before animation starts
+        sliderContainer.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
+    }
+    setTimeout(() => {
+        sliderContainer.style.transition = 'transform 0.5s ease';
+        currentIndex--;
+        sliderContainer.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
+    }, 20); // Short timeout to let the jump happen instantly
+}
+
+// Automatic loop every 3 seconds (if desired)
+let sliderInterval = setInterval(moveNext, 3000);
+
+// Event listeners for buttons
+nextButton.addEventListener('click', () => {
+    clearInterval(sliderInterval); // Stop auto slider when user interacts
+    moveNext();
+    sliderInterval = setInterval(moveNext, 3000); // Restart auto slider after interaction
 });
 
-document.querySelector('.next-arrow').addEventListener('click', function() {
-  if (index < totalImages - 3) {
-    index++;
-  } else {
-    // Jump back to the start (for a seamless loop)
-    index = 0;
-  }
-  slider.style.transform = `translateX(-${index * slideWidth}px)`;
+prevButton.addEventListener('click', () => {
+    clearInterval(sliderInterval); // Stop auto slider when user interacts
+    movePrev();
+    sliderInterval = setInterval(moveNext, 3000); // Restart auto slider after interaction
 });
-
-
 
 </script>
 

@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 //  $config['base_url'] = 'https://asayjewels.com/demopro/';
-$config['base_url'] = 'http://localhost/pro/';
+$config['base_url'] = 'http://localhost/prosoft/';
 
 
 // http://thecrimecontrol.in/a/

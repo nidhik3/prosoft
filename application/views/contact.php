@@ -8,6 +8,21 @@
   .contact .info p {
     padding: 0px;
   }
+
+
+
+
+  .wb {
+    background-color: #fff;
+    color: black;
+    font-size: 20px;
+    padding: 8px 18px 8px 18px;
+    border: 1px solid black;
+    font-weight: 500;
+
+
+  }
+  
 </style>
 <section class="header-row">
   <div class="row d-flex">
@@ -18,79 +33,64 @@
     </div>
   </div>
 </section>
-<section id="contact" class="contact">
-  <div class="container">
+<section class="space-y">
 
-
-    <div class="row">
-      <div class="col-sm-6 text-center">
-        <div class="info">
-          <div>
-            <i class="ri-map-pin-line"></i>
-            <p>PROSOFT LLC, Office No 10,Level 1,<br />Sharjah Media City, Sharjah,UAE</p>
-          </div>
-
-
-
+<div class="row fonts d-flex " style="padding-bottom: 60px;">
+  <div class="col-md-5 con1 space-y">
+    <div class="col-md-2"></div>
+    <div class="col-md-8"> <a class="bw">CONTACT</a>
+      <h6 class="heading pt-3"> SEE SOLUTIONS</h6>
+      <div class="row pt-4">
+        <div class="col ">
+          <a class="cl" href="">790/8 Dev Ashish Enclave, Kailash Vihar, City Centre 2, Gwalior – 474011</a>
         </div>
       </div>
-
-      <div class="col-sm-6 text-center">
-        <div class="info">
-          <div>
-            <i class="ri-mail-send-line"></i>
-            <p> admin@prosoft.org.in</p>
-            <p> For Sales contact US on Sales@prosoft.org.in</p>
-            <p>  For Technical support contact us on Support@prosoft.org.in</p> 
-          </div>
-
-
+      <div class="row pt-4">
+        <div class="col">
+          <i style="margin-right: 6px;font-size: 17px;" class="fa-regular fa-envelope"></i>
+          <a class="cl" href="mailto:seesandt.marketing@gmail.com">seesandt.marketing@gmail.com</a>
         </div>
       </div>
-      <div class="col-sm-4 text-center">
-        <div class="info">
-
-
-
+      <div class="row pt-4">
+        <div class="col">
+          <i style="margin-right: 6px; font-size: 17px;" class="icofont-phone"></i>
+          <a class="cl" href="tel:9425755530">+91-94257-55530</a>
         </div>
       </div>
-
-
     </div>
-    <div class="row">
+    <div class="col-md-2"></div>
 
-      <div class="col-lg-6 col-md-6 mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="200">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.765864979887!2d55.676108815011226!3d25.278460483858428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef5929a229f1c75%3A0xb28ae30eb6bb813a!2sSharjah%20Media%20City%20(Shams)!5e0!3m2!1sen!2sin!4v1640079002110!5m2!1sen!2sin" style="border:0; width:100%; height:400px" allowfullscreen="" loading="lazy"></iframe>
-
-      </div>
-
-      <div class="col-lg-5 col-md-12" data-aos="fade-up" data-aos-delay="300">
-        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-          <div class="form-group">
-            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-          </div>
-          <div class="form-group">
-            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-          </div>
-          <div class="form-group">
-            <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-          </div>
-          <div class="my-3">
-            <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Your message has been sent. Thank you!</div>
-          </div>
-          <div class="text-center"><button type="submit">Send Message</button></div>
-        </form>
-      </div>
-
-    </div>
 
   </div>
-</section><!-- End Contact Section -->
+  <div class="col-md-1"></div>
+  <div class="col-md-5">
+    <form action="" id="contactform" method="post" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" >
+    </div>
+    <div class="form-group pt-3">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" id="email" >
+    </div>
+    <div class="form-group pt-3">
+        <label for="message">Message</label>
+        <textarea class="form-controls" id="message" rows="3"></textarea>
+    </div>
+    <div class="col-md-8 d-flex justify-content-center">
+    <div class="form-group text-center pt-3">
+      <button type="submit" class=" wb">Send Message</button>
+    </div>
+   </div>
+  
+     
+  </form>
+  </div>
+  <div class="col-md-1"></div>
+
+
+</div>
+</section>
 <script>
   $(document).ready(function() {
     $('a[href$="Contact"]').addClass(" active");

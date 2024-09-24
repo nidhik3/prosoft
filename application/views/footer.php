@@ -74,10 +74,31 @@
     }
 
     @media (max-width: 768px) {}
+    #footer{
+  background-color: #F6FBFF;
+}
+
+.circle {
+    width: 50px; /* Adjust size as needed */
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
+
+.circle img {
+    width: 60%; /* Adjust size of the image within the circle */
+    height: auto;
+}
+
 </style>
 
 
-<footer class="footer-no-negative wf-section">
+<footer class="footer-no-negative wf-section" id="footer">
     <div>
         <div style="max-width: 90%;margin:auto;">
             <div class="  footer-row-1 row tc m-0" style="    justify-content: space-around;">
@@ -157,11 +178,24 @@
                                 <button type="submit" class="sub-send sub-send-btn-trigger  ml-0"
                                     style="border-radius: 0px;width:20%;margin-left:0px;    background: #f6aa00;">→</button>
                             </form>
-                            <div class="col-12 mt-5 row">
-                                <div class="col-md-3 text-center"><img src="assets/img/fac.png" alt=""></div>
-                                <div class="col-md-3 text-center"><img src="assets/img/wha.png" alt=""></div>
-                                <div class="col-md-3 text-center"><img src="assets/img/ins.png" alt=""></div>
-                            </div>
+                           <div class="col-12 mt-5 row">
+    <div class="col-md-3 text-center">
+        <div class="circle">
+            <img src="assets/img/fac.png" alt="">
+        </div>
+    </div>
+    <div class="col-md-3 text-center">
+        <div class="circle">
+            <img src="assets/img/wha.png" alt="">
+        </div>
+    </div>
+    <div class="col-md-3 text-center">
+        <div class="circle">
+            <img src="assets/img/ins.png" alt="">
+        </div>
+    </div>
+</div>
+
                         </div>
                     </div>
                 </div>

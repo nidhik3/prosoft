@@ -184,7 +184,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 
 <div class="video-section desk">
   <div class="video-overlay" style="position: relative;">
-    <img src="<?php echo base_url(); ?>assets/img/aboutt.png" alt="" style="width: 100%;">
+    <img src="<?php echo base_url(); ?>assets/img/about.png" alt="" style="width: 100%;">
     <div class="text-overlay">
       <h1 style="font-weight:600;">About Us</h1>
 
@@ -252,9 +252,14 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 <section class="topp">
   <div class="container">
     <h1 class=" text-center" style="font-weight: 700;">Prosoft’s Edge</h1>
-    <p class="text-center mt-md-5 mt-3 wdd" style="max-width: 90%;margin:auto;">PROSOFT having head office in “INDIA”
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-8">
+      <p class="text-center wdd">PROSOFT having head office in “INDIA”
       having installations in other countries like Kuwait, Qutar, Maldives, and Singapore, UAE.</p>
 
+      </div>
+    </div>
+   
     <div class="row mt-md-5 mt-3 asds" style="width: 100%;    justify-content: space-around;">
 
       <div class="col-md-5 mt-3">
@@ -263,10 +268,10 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
       <div class="col-md-5 mt-3">
         <img src="assets/img/as2.png" alt="" width="100%">
       </div>
-      <div class="col-md-5 mt-3">
+      <div class="col-md-5 mt-5">
         <img src="assets/img/as3.png" alt="" width="100%">
       </div>
-      <div class="col-md-5 mt-3">
+      <div class="col-md-5 mt-5 pt-3 d-flex align-items-center">
         <img src="assets/img/as4.png" alt="" width="100%">
       </div>
 
@@ -276,11 +281,10 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 </section>
 <section style="background-color: #FAFAFA;">
   <div class="container mt-5 pb-5">
-    <h1 class=" text-center" style="font-weight: 700;">Our Valuable<br>
-      Clients</h1>
+  
     <div class="row mt-md-5 mt-3 asds">
       <div class="col-md-12">
-        <img src="assets/img/ourv.png" alt="" width="100%">
+        <img src="assets/img/timeline.png" alt="" width="100%">
       </div>
     </div>
 
