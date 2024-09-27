@@ -735,6 +735,15 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     position: relative; /* Maintain stacking context */
 }
 
+.cont1:hover .scale-img {
+    transform: scale(1.1); /* Scale up the image to 110% */
+    transition: transform 0.5s ease; /* Smooth scaling transition */
+}
+
+.cont1:hover .scale-img1 {
+    transform: scale(1.1s); /* Scale up the image to 110% */
+    transition: transform 0.5s ease; /* Smooth scaling transition */
+}
 
 </style>
 
@@ -767,7 +776,16 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 
 
 <!-- ====================grid-container==================== -->
+
+
 <section>
+  <div class="container">
+    <h1 class=" text-center" style="font-weight: 700;">An all in one<br> software solution.</h1>
+
+    <p class="text-center">Prosoft’s Hospital Information System delivers complete, reliable solutions for medical
+      service management.<br> Manage all major functions effortlessly on one intuitive platform. Get Prosoft today!</p>
+
+  </div>
   <div class="container cont1 grid-container">
     <div class="grid-item item1">
       <div class="overlay"></div>
@@ -777,7 +795,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     </div>
     <div class="grid-item item2 glogo">
       <div class="overlay"></div> <!-- Overlay for item2 -->
-      <img src="assets/image/grid2.png" alt="ProSoft Logo">
+      <img src="assets/image/grid2.png" alt="ProSoft Logo" class="scale-img">
     </div>
 
     <div class="grid-item item3">
@@ -794,7 +812,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     </div>
 
     <div class="grid-item item5 team-photo">
-      <img src="assets/image/grid5.png" alt="Team Photo">
+      <img src="assets/image/grid5.png" alt="Team Photo" class="scale-img1">
     </div>
 
     <div class="grid-item item6">
@@ -806,28 +824,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 
   </div>
 </section>
-
-
-
 <!-- ====================grid-container==================== -->
-
-
-
-<section>
-  <div class="container">
-    <h1 class=" text-center" style="font-weight: 700;">An all in one<br> software solution.</h1>
-
-    <p class="text-center">Prosoft’s Hospital Information System delivers complete, reliable solutions for medical
-      service management.<br> Manage all major functions effortlessly on one intuitive platform. Get Prosoft today!</p>
-
-    <div class=" mt-md-5 mt-3 " style="width: 100%;">
-
-      <img src="<?php echo base_url(); ?>assets/img/all.png" alt="">
-
-    </div>
-
-  </div>
-</section>
 <section>
   <div class="container">
     <h1 class=" text-center" style="font-weight: 700;text-transform: capitalize;;">services we offer.</h1>
