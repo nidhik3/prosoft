@@ -286,6 +286,21 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     left: 50%;
     transform: translateX(-50%);
   }
+  .list{
+    list-style-type: none;
+    font-size: 18px;
+  }
+  .list li{
+    padding: 10px 0px;
+  }
+  .list img{
+    padding-right:8px;
+  }
+  .v-heading{
+    font-weight: 800;
+    font-size: 35px;
+    padding-left: 40px;
+  }
 </style>
 
 <div class="video-section desk">
@@ -397,8 +412,9 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 
   </div>
 
+  <!-- 
   <div class="container timeline">
-    <!-- Adding the journey text at the top -->
+    
     <div class="journey">Our Journey</div>
 
     <div class="timeline-item left">
@@ -470,7 +486,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
       </div>
       <div class="timeline-date">2022</div>
     </div>
-  </div>
+  </div> -->
 
 
 
@@ -478,6 +494,27 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 <section>
   <div class="conn" style="padding-left:10%;">
     <img src="assets/img/vall.png" alt="" width="100%">
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <p class="v-heading">Value Proposition</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-7">
+        <ul class="list">
+          <li><img src="assets/image/tick.png" alt="">High return on investment with low total cost of ownership</li>
+          <li><img src="assets/image/tick.png" alt="">Solutions to strengthen core functions for greater impact</li>
+          <li><img src="assets/image/tick.png" alt="">On-time, on-budget project delivery</li>
+          <li><img src="assets/image/tick.png" alt="">100% total maintenance support</li>
+          <li><img src="assets/image/tick.png" alt="">Customizable solutions</li>
+        </ul>
+      </div>
+      <div class="col-md-5">
+        <img src="assets/image/value.png" alt="">
+      </div>
+    </div>
   </div>
 </section>
 
