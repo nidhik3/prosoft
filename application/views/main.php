@@ -379,8 +379,8 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     letter-spacing: 1px;
   }
 
-/* ncss */
-.image-slider {
+  /* ncss */
+  .image-slider {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -389,77 +389,351 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     max-width: 1000px;
     margin: 0 auto;
     position: relative;
-}
+  }
 
-.slider-container {
+  .slider-container {
     display: flex;
     transition: transform 0.5s ease;
-    width: calc(300px * 6); /* Adjust width based on number of images */
-}
+    width: calc(300px * 6);
+    /* Adjust width based on number of images */
+  }
 
-.slider-container img {
-    width: 300px; /* Adjust the width based on your design */
+  .slider-container img {
+    width: 300px;
+    /* Adjust the width based on your design */
     margin-right: 10px;
-}
+  }
 
-.prev-arrow, .next-arrow {
+  .prev-arrow,
+  .next-arrow {
     cursor: pointer;
     background-color: transparent;
     border: none;
     padding: 10px;
     font-size: 20px;
-    z-index:1;
+    z-index: 1;
+  }
+
+
+  /* effortles */
+  .e-colored {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .e-bw {
+    transition: opacity 0.5s ease;
+  }
+
+  .effortless {
+    position: relative;
+  }
+
+  .effortless:hover .e-colored {
+    opacity: 1;
+  }
+
+  .effortless:hover .e-bw {
+    opacity: 0;
+  }
+
+  /* effortles */
+  .cont1 {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr 1fr;
+    /* Make the middle column smaller */
+    grid-template-rows: repeat(2, auto);
+    /* Two rows */
+    grid-template-areas:
+      "item1 item2 item3"
+      /* First row: left - logo (small) - right */
+      "item4 item5 item6";
+    /* Second row: left - team photo (span) - right */
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .grid-item {
+    background-color: #1a406d;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Area Definitions for Grid Items */
+  .item1 {
+    grid-area: item1;
+  }
+
+  /* Left column first row */
+  .item2 {
+    grid-area: item2;
+  }
+
+  /* Small logo in the middle */
+  .item3 {
+    grid-area: item3;
+  }
+
+  /* Right column first row */
+  .item4 {
+    grid-area: item4;
+  }
+
+  /* Left column second row */
+  .item5 {
+    grid-area: item5;
+    /* Centered team photo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .item6 {
+    grid-area: item6;
+  }
+
+  /* Right column second row */
+
+  /* Team photo styling */
+  .team-photo img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    height: 155%;
+    /* Full height to stretch across */
+    transform: translateY(-18%);
+    /* Move up half, so it's half in row 1 and half in row 2 */
+  }
+
+  .grid-item p,
+  .grid-item h4 {
+    margin: 0;
+    color: #cfcfcf;
+  }
+
+  .item1,
+  .item3 {
+    height: 400px;
+  }
+
+  .item2 {
+    height: 250px;
+  }
+
+  .item4,
+  .item6 {
+    height: 270px;
+  }
+
+  .item5 {
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .item1,
+  .item3,
+  .item4,
+  .item6 {
+    position: relative;
+  }
+
+  .grid-bg1 {
+    position: absolute;
+    bottom: 0;
+    left: 16%;
+  }
+
+  .grid-bg2 {
+    position: absolute;
+    bottom: 0;
+    left: 21%;
+  }
+
+  .grid-bg3 {
+    position: absolute;
+    bottom: 0px;
+    right: 0%;
+  }
+
+  .grid-bg4 {
+    position: absolute;
+    bottom: 0;
+    right: 0%;
+  }
+
+  .g-card {
+    font-size: 22px;
+    font-weight: 500;
+    text-align: left;
+    position: absolute;
+    top: 5%;
+    left: 3%;
+  }
+
+  /* ncss */
+  /* Overlay styling */
+
+  .item1 .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent overlay */
+    transition: opacity 0.5s ease;
+    z-index: 1;
+    /* Overlay underneath text but above background image */
+    opacity: 1;
+    /* Initially visible */
+    border-radius: 18px;
+  }
+ .item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent overlay */
+    transition: opacity 0.5s ease;
+    z-index: 1;
+    /* Overlay underneath text but above background image */
+    opacity: 1;
+    /* Initially visible */
+    border-radius: 18px;
+  }
+
+ 
+  .item3 .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent overlay */
+    transition: opacity 0.5s ease;
+    z-index: 1;
+    /* Overlay underneath text but above background image */
+    opacity: 1;
+    /* Initially visible */
+    border-radius: 18px;
+  }
+ .item4 .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent overlay */
+    transition: opacity 0.5s ease;
+    z-index: 1;
+    /* Overlay underneath text but above background image */
+    opacity: 1;
+    /* Initially visible */
+    border-radius: 18px;
+  }
+
+ 
+  .item6 .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent overlay */
+    transition: opacity 0.5s ease;
+    z-index: 1;
+    /* Overlay underneath text but above background image */
+    opacity: 1;
+    /* Initially visible */
+    border-radius: 18px;
+  }
+
+  /* Remove the overlay on hover */
+  .cont1:hover .overlay {
+    opacity: 0;
+    /* Disappears on hover */
+  }
+
+  /* Ensure text and image appear above the overlay */
+  
+  .grid-item.item1 .g-card,
+  .grid-item.item1 {
+    z-index: 2;
+  
+  }
+
+ 
+  .grid-item.item2 .g-card,
+  .grid-item.item2 {
+    z-index: 2;
+  
+  }
+
+ 
+  .grid-item.item3 .g-card,
+  .grid-item.item3 {
+    z-index: 2;
+  
+  }
+
+ 
+  .grid-item.item4 .g-card,
+  .grid-item.item4 {
+    z-index: 2;
+  
+  }
+
+ 
+  .grid-item.item5 .g-card,
+  .grid-item.item5 {
+    z-index: 2;
+  
+  }
+
+
+/* Overlay styling for item2 */
+.grid-item.item2 {
+    position: relative; /* Ensure the overlay is positioned relative to this item */
 }
 
-
-/* effortles */
-.e-colored {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: opacity 0.5s ease;
+.grid-item.item2 .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    transition: opacity 0.5s ease;
+    z-index: 1; /* Overlay underneath text but above background image */
+    opacity: 1; /* Initially visible */
+    border-radius: 18px; /* Optional: rounded corners for the overlay */
 }
 
-.e-bw {
-  transition: opacity 0.5s ease;
+/* Remove the overlay on hover for item2 */
+.cont1:hover .overlay {
+    opacity: 0;
+    /* Disappears on hover */
+  }
+
+/* Ensure content appears above the overlay */
+.grid-item.item2 img {
+    z-index: 2; /* Higher z-index for content */
+    position: relative; /* Maintain stacking context */
 }
-
-.effortless {
-  position: relative;
-}
-
-.effortless:hover .e-colored {
-  opacity: 1;
-}
-
-.effortless:hover .e-bw {
-  opacity: 0;
-}
-
-/* effortles */
-
-
-.grid-container {
-            background-color: #0b2d50;
-            padding: 20px;
-        }
-        .grid-item {
-            background-color: #123456;
-            color: white;
-            padding: 30px;
-            margin: 15px;
-            border-radius: 15px;
-            text-align: center;
-        }
-        .grid-item img {
-            max-width: 100%;
-            border-radius: 15px;
-        }
-
-
-/* ncss */
-
 
 
 </style>
@@ -492,42 +766,51 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 
 
 
-<!-- 
-===========
-=========
-grid-container============ -->
+<!-- ====================grid-container==================== -->
+<section>
+  <div class="container cont1 grid-container">
+    <div class="grid-item item1">
+      <div class="overlay"></div>
+      <p class="g-card"><span style="color:white;">Universal Product.</span> Global solutions for all healthcare needs,
+        regardless of department or demographics.</p>
+      <img src="assets/image/grid1.png" alt="" class="grid-bg1">
+    </div>
+    <div class="grid-item item2 glogo">
+      <div class="overlay"></div> <!-- Overlay for item2 -->
+      <img src="assets/image/grid2.png" alt="ProSoft Logo">
+    </div>
 
-<!-- 
-<div class="container grid-container">
-  <div class="row">
-      <div class="col-md-4 grid-item">
-        <p> <strong>Universal Product.</strong>
-          Global solutions for all healthcare needs, regardless of department or demographics.</p>
-      </div>
-      <div class="col-md-3 grid-item">
-          
-          <img src="logo.png" alt="ProSoft Logo">
-      </div>
-      <div class="col-md-4 grid-item">
-          <h4><strong>Update Request.</strong></h4>
-          <p>Fully tailorable and upgradable to meet evolving facility requirements.</p>
-      </div>
-  </div>
+    <div class="grid-item item3">
+      <div class="overlay"></div> <!-- Overlay for item3 -->
+      <p class="g-card"><span style="color:white;">Update Request.</span>Fully tailorable and upgradable to meet
+        evolving facility requirements.</p>
+      <img src="assets/image/grid3.png" alt="" class="grid-bg2">
+    </div>
 
-  <div class="row">
-      <div class="col-md-4 grid-item">
-          <h4><strong>Add-on Features.</strong></h4>
-          <p>Unique add-ons for regional demands.</p>
-      </div>
-      <div class="col-md-3 grid-item">
-          <img src="team-photo.jpg" alt="Team Photo">
-      </div>
-      <div class="col-md-4 grid-item">
-          <h4><strong>Set Regulations.</strong></h4>
-          <p>Configurable to operate according to your business’s unique rules.</p>
-      </div>
+    <div class="grid-item item4">
+      <div class="overlay"></div> <!-- Overlay for item4 -->
+      <p class="g-card"><span style="color:white;">Add-on Features.</span>Unique add-ons for regional demands.</p>
+      <img src="assets/image/grid4.png" alt="" class="grid-bg3">
+    </div>
+
+    <div class="grid-item item5 team-photo">
+      <img src="assets/image/grid5.png" alt="Team Photo">
+    </div>
+
+    <div class="grid-item item6">
+      <div class="overlay"></div> <!-- Overlay for item6 -->
+      <p class="g-card"><span style="color:white;">Set Regulations.</span>Configurable to operate according to your
+        business’s unique rules.</p>
+      <img src="assets/image/grid6.png" alt="" class="grid-bg4">
+    </div>
+
   </div>
-</div> -->
+</section>
+
+
+
+<!-- ====================grid-container==================== -->
+
 
 
 <section>
@@ -550,7 +833,7 @@ grid-container============ -->
     <h1 class=" text-center" style="font-weight: 700;text-transform: capitalize;;">services we offer.</h1>
 
 
-    <div class="row mt-md-5 mt-3 asds" style="width: 100%;    justify-content: space-around;">
+    <div class="row mt-md-5 mt-3 asds" style="width: 100%;    justify-content: center;">
 
       <div class="col-md-5 mt-3">
         <img src="assets/img/s1.png" alt="" width="100%">
@@ -585,12 +868,12 @@ grid-container============ -->
   <div class="container mt-5 pb-5">
     <h1 class=" text-center" style="font-weight: 700;">Effortless Integrations for <br>
       Seamless Operations.
-     </h1>
+    </h1>
     <div class="row mt-md-5 mt-3 effortless">
       <div class="col-md-12 e-bw">
         <img src="assets/image/eff.png" alt="" width="100%">
-      </div>  
-       <div class="col-md-12 e-colored">
+      </div>
+      <div class="col-md-12 e-colored">
         <img src="assets/image/eff-clr.png" alt="" width="100%">
       </div>
     </div>
@@ -598,26 +881,29 @@ grid-container============ -->
   </div>
 </section>
 
-<section >
+<section>
   <div class="row" style="background: #02182E;color:white;">
-    <div class="col-md-7 d-flex justify-content-center align-items-center" >
+    <div class="col-md-7 d-flex justify-content-center align-items-center">
       <div class="col-md-9">
-         <h1 class=" text-start" style="font-weight: 700;">About Us </h1>
-      <p>"PROSOFT" is a state certified provider of Healthcare services. PROSOFT are founded in 2007 In INDIA with the idea of easing the stress on Healthcare services and with the goal of providing easy and best solutions forever. Our goal is to create a collaborative plan that will allow the Health sector to maintain security if possible while maintaining their level of independence and functioning.
-      </p>
-      <ul class="pb-3" style="list-style: disc;">
-        <li>High return on investment with low total cost of ownership</li>
-        <li> Solutions to strengthen core functions for greater impact</li>
-        <li> On-time, on-budget project delivery</li>
-      </ul>
+        <h1 class=" text-start" style="font-weight: 700;">About Us </h1>
+        <p>"PROSOFT" is a state certified provider of Healthcare services. PROSOFT are founded in 2007 In INDIA with the
+          idea of easing the stress on Healthcare services and with the goal of providing easy and best solutions
+          forever. Our goal is to create a collaborative plan that will allow the Health sector to maintain security if
+          possible while maintaining their level of independence and functioning.
+        </p>
+        <ul class="pb-3" style="list-style: disc;">
+          <li>High return on investment with low total cost of ownership</li>
+          <li> Solutions to strengthen core functions for greater impact</li>
+          <li> On-time, on-budget project delivery</li>
+        </ul>
 
-      <a href="#" class="ban mt-4" style="background-color: #f6aa00;color:#000;">Learn More</a>
+        <a href="#" class="ban mt-4" style="background-color: #f6aa00;color:#000;">Learn More</a>
       </div>
-     
+
 
     </div>
     <div class="col-md-5 p-0">
-     <img src="assets/img/abb.png" alt="" width="100%">
+      <img src="assets/img/abb.png" alt="" width="100%">
 
     </div>
   </div>
@@ -631,21 +917,21 @@ grid-container============ -->
   <div class="container">
     <h1 class=" text-center" style="font-weight: 700;">Trusted by Leading Healthcare<br> Providers Worldwide.</h1>
   </div>
-    <div class="row mt-md-5 mt-3 ">
-      <div class="image-slider">
-        <!-- <button class="prev-arrow px-5">❮</button> -->
-        <div class="slider-container">
-            <img src="assets/img/trust1.png" alt="Image 1" >
-            <img src="assets/img/trust2.png" alt="Image 2" >
-            <img src="assets/img/trust3.png" alt="Image 3" >
-            <img src="assets/img/trust1.png" alt="Image 4" >
-            <img src="assets/img/trust2.png" alt="Image 5" >
-            <img src="assets/img/trust3.png" alt="Image 6" >
-        </div>
-        <!-- <button class="next-arrow px-5">❯</button> -->
+  <div class="row mt-md-5 mt-3 ">
+    <div class="image-slider">
+      <!-- <button class="prev-arrow px-5">❮</button> -->
+      <div class="slider-container">
+        <img src="assets/img/trust1.png" alt="Image 1">
+        <img src="assets/img/trust2.png" alt="Image 2">
+        <img src="assets/img/trust3.png" alt="Image 3">
+        <img src="assets/img/trust1.png" alt="Image 4">
+        <img src="assets/img/trust2.png" alt="Image 5">
+        <img src="assets/img/trust3.png" alt="Image 6">
+      </div>
+      <!-- <button class="next-arrow px-5">❯</button> -->
     </div>
-    
-  
+
+
   </div>
 </section>
 
@@ -678,60 +964,60 @@ grid-container============ -->
 </script> -->
 
 <script>
-const sliderContainer = document.querySelector('.slider-container');
-const prevButton = document.querySelector('.prev-arrow');
-const nextButton = document.querySelector('.next-arrow');
+  const sliderContainer = document.querySelector('.slider-container');
+  const prevButton = document.querySelector('.prev-arrow');
+  const nextButton = document.querySelector('.next-arrow');
 
-let currentIndex = 0;
-const imageWidth = 310;  // Adjust to match image width + margin-right
-const totalImages = document.querySelectorAll('.slider-container img').length / 2;  // Since images are duplicated
+  let currentIndex = 0;
+  const imageWidth = 310;  // Adjust to match image width + margin-right
+  const totalImages = document.querySelectorAll('.slider-container img').length / 2;  // Since images are duplicated
 
-// Function to move the slider to the next image
-function moveNext() {
+  // Function to move the slider to the next image
+  function moveNext() {
     currentIndex++;
     sliderContainer.style.transition = 'transform 0.5s ease';
     sliderContainer.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
 
     // Reset to the first image after the last one
     if (currentIndex === totalImages) {
-        setTimeout(() => {
-            sliderContainer.style.transition = 'none'; // Disable animation for the reset
-            currentIndex = 0;
-            sliderContainer.style.transform = `translateX(0)`;
-        }, 500); // Matches the transition duration
+      setTimeout(() => {
+        sliderContainer.style.transition = 'none'; // Disable animation for the reset
+        currentIndex = 0;
+        sliderContainer.style.transform = `translateX(0)`;
+      }, 500); // Matches the transition duration
     }
-}
+  }
 
-// Function to move the slider to the previous image
-function movePrev() {
+  // Function to move the slider to the previous image
+  function movePrev() {
     currentIndex--;
     if (currentIndex < 0) {
-        sliderContainer.style.transition = 'none'; // Disable animation to reset instantly
-        currentIndex = totalImages - 1; // Jump to the last image before animation starts
-        sliderContainer.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
+      sliderContainer.style.transition = 'none'; // Disable animation to reset instantly
+      currentIndex = totalImages - 1; // Jump to the last image before animation starts
+      sliderContainer.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
     }
     setTimeout(() => {
-        sliderContainer.style.transition = 'transform 0.5s ease';
-        currentIndex--;
-        sliderContainer.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
+      sliderContainer.style.transition = 'transform 0.5s ease';
+      currentIndex--;
+      sliderContainer.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
     }, 20); // Short timeout to let the jump happen instantly
-}
+  }
 
-// Automatic loop every 3 seconds (if desired)
-let sliderInterval = setInterval(moveNext, 3000);
+  // Automatic loop every 3 seconds (if desired)
+  let sliderInterval = setInterval(moveNext, 3000);
 
-// Event listeners for buttons
-nextButton.addEventListener('click', () => {
+  // Event listeners for buttons
+  nextButton.addEventListener('click', () => {
     clearInterval(sliderInterval); // Stop auto slider when user interacts
     moveNext();
     sliderInterval = setInterval(moveNext, 3000); // Restart auto slider after interaction
-});
+  });
 
-prevButton.addEventListener('click', () => {
+  prevButton.addEventListener('click', () => {
     clearInterval(sliderInterval); // Stop auto slider when user interacts
     movePrev();
     sliderInterval = setInterval(moveNext, 3000); // Restart auto slider after interaction
-});
+  });
 
 </script>
 

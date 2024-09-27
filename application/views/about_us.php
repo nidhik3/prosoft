@@ -174,13 +174,119 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
       letter-spacing: 2px;
       line-height: 28px;
     }
-
-
-
-
-
   }
 </style>
+
+<style>
+         .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        /* Central vertical line */
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 3px;
+            background-color: #fff;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Each timeline item */
+        .timeline-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 70px;
+            position: relative;
+        }
+
+        /* Arrows pointing to center */
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .timeline-item.left::before {
+            right: 50%;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent #fff;
+        }
+
+        .timeline-item.right::before {
+            left: 50%;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent #fff transparent transparent;
+        }
+
+        .timeline-badge {
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .timeline-badge img {
+            width: 30px;
+        }
+
+        /* Centered date */
+        .timeline-date {
+            background-color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 50%;
+            z-index: 1;
+        }
+
+        /* Content styling */
+        .timeline-content {
+            max-width: 250px;
+            padding: 10px 20px;
+            background-color: transparent;
+        }
+
+        .timeline-content h5 {
+            margin-bottom: 5px;
+            color: orange;
+        }
+
+        .left .timeline-content {
+            text-align: right;
+        }
+
+        .right .timeline-content {
+            text-align: left;
+        }
+
+        /* Adding the journey text */
+        .journey {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+    </style>
 
 <div class="video-section desk">
   <div class="video-overlay" style="position: relative;">
@@ -243,7 +349,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
       </div>
       <div class="col-md-12 mt-5">
         <h1 style="color: #fff;font-weight:800;">15</h1>
-        <h4 style="color: #fff;font-weight:500;">team Members</h4>
+        <h4 style="color: #fff;font-weight:500;">Team Members</h4>
       </div>
     </div>
 
@@ -279,6 +385,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 
   </div>
 </section>
+
 <section style="background-color: #FAFAFA;">
   <div class="container mt-5 pb-5">
   
@@ -289,6 +396,84 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     </div>
 
   </div>
+
+  <div class="container timeline">
+    <!-- Adding the journey text at the top -->
+    <div class="journey">Our Journey</div>
+
+    <div class="timeline-item left">
+        <div class="timeline-content">
+            <h5>PULSE</h5>
+        </div>
+        <div class="timeline-badge">
+            <img src="pulse-icon.png" alt="Pulse Icon">
+        </div>
+        <div class="timeline-date">2007</div>
+    </div>
+
+    <div class="timeline-item right">
+        <div class="timeline-date">2014</div>
+        <div class="timeline-badge">
+            <img src="cms-icon.png" alt="CMS Icon">
+        </div>
+        <div class="timeline-content">
+            <h5>ANGLEPRO-CMS</h5>
+        </div>
+    </div>
+
+    <div class="timeline-item left">
+        <div class="timeline-content">
+            <h5>ANGLEPRO-LIMS</h5>
+        </div>
+        <div class="timeline-badge">
+            <img src="lims-icon.png" alt="LIMS Icon">
+        </div>
+        <div class="timeline-date">2018</div>
+    </div>
+
+    <div class="timeline-item right">
+        <div class="timeline-date">2019</div>
+        <div class="timeline-badge">
+            <img src="pharmacy-icon.png" alt="Pharmacy Icon">
+        </div>
+        <div class="timeline-content">
+            <h5>ANGLEPRO-Pharmacy</h5>
+        </div>
+    </div>
+
+    <div class="timeline-item left">
+        <div class="timeline-content">
+            <h5>ANGLEPRO-LIMS</h5>
+        </div>
+        <div class="timeline-badge">
+            <img src="lims2-icon.png" alt="LIMS 2 Icon">
+        </div>
+        <div class="timeline-date">2020</div>
+    </div>
+
+    <div class="timeline-item right">
+        <div class="timeline-date">2021</div>
+        <div class="timeline-badge">
+            <img src="erp-icon.png" alt="ERP Icon">
+        </div>
+        <div class="timeline-content">
+            <h5>ANGLEPRO-ERP</h5>
+        </div>
+    </div>
+
+    <div class="timeline-item left">
+        <div class="timeline-content">
+            <h5>ANGLEPRO-CSMS</h5>
+        </div>
+        <div class="timeline-badge">
+            <img src="csms-icon.png" alt="CSMS Icon">
+        </div>
+        <div class="timeline-date">2022</div>
+    </div>
+</div>
+
+
+
 </section>
 <section>
   <div class="conn" style="padding-left:10%;">
@@ -320,3 +505,5 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 
   splide.mount(window.splide.Extensions);
 </script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
