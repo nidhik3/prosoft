@@ -37,7 +37,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"></script>
-   
+
     <style>
         ul,
         ol {
@@ -52,13 +52,14 @@
             .mtt {
                 font-size: 24px;
             }
-            .header .contact{
+
+            .header .contact {
                 margin: 10px 20px;
             }
         }
 
-        .asds .col-6{
-        text-align: center;
+        .asds .col-6 {
+            text-align: center;
         }
     </style>
 </head>
@@ -85,33 +86,42 @@
                 <ul style="width: 100%; justify-content: space-around;">
                     <li><a href="<?php echo base_url(); ?>">Home</a></li>
                     <li><a href="<?php echo base_url('About_Us'); ?>">About</a></li>
-                    
+
                     <li class="dropdown"><a href="<?php echo base_url('Services'); ?>">Services <i
                                 class="bi bi-chevron-down"></i></a>
                         <ul>
-                            <li><a href="<?php echo base_url('Services'); ?>">Service1</a></li>
-                            <li><a href="<?php echo base_url('Services'); ?>">Service2</a></li>
-                           
+                            <li><a href="Service1">Product Development Services </a></li>
+                            <li><a href="Service2">Website Design and Maintaince </a></li>
+                            <li><a href="Service3">Domain Registration & Email Configuration </a></li>
+
                         </ul>
                     </li>
                     <li class="dropdown"><a href="<?php echo base_url('Product'); ?>">Product <i
                                 class="bi bi-chevron-down"></i></a>
                         <ul>
-                            <li><a href="<?php echo base_url('Product'); ?>">Product1</a></li>
-                            <li><a href="<?php echo base_url('Product'); ?>">Product2</a></li>
-                           
+                            <li><a href="HMSystem">HOSPITAL MANAGEMENT SYSTEM (ANGLEPRO HIS)</a></li>
+                            <li><a href="CMSystem">CLINIC MANAGEMENT SYSTEM (ANGLEPRO CMS) </a></li>
+                            <li><a href="LISystem">LAB INFORMATION SYSTEM (ANGLEPRO LIS) </a></li>
+                            <li><a href="PharmacySystem">PHARMACY MANAGEMENT SYSTEM (ANGLEPRO PMS) </a></li>
+                            <li><a href="Dms">DOCUMENT MANAGEMENT SYTEM (ANGLEPRO DMS)</a></li>
+                            <li><a href="RIS">RADIOLOGY INFORMATION SYSTEM (ANGLEPRO RIS) </a></li>
+                            <li><a href="CSMS">CLAIMS SUBMISSION MANAGEMENT SYSTEM (ANGLEPRO CSMS)</a></li>
+                            <li><a href="ERP">ERP (ANGLEPRO ERP)</a></li>
+                            <li><a href="Mobile">MOBILE SOLUTIONS</a></li>
+                            <li><a href="KISOK">KIOSK SOLUTIONS</a></li>
+                            <li><a href="TPI">THIRD PARTY INTEGRATIONS</a></li>
                         </ul>
                     </li>
 
-                    <li><a href="<?php echo base_url('News'); ?>">News</a></li>
-                  
+                    <!-- <li><a href="<?php echo base_url('News'); ?>">News</a></li> -->
+
                     <li><a href="<?php echo base_url('Contact'); ?>" class="contact"
                             style="color:#000;color:#fff;">Contact</a></li>
-              
+
 
                 </ul>
             </nav>
-            
+
             <!-- .navbar -->
 
             <i class="mobile-nav-toggle mobile-nav-show bi bi-list col-6 text-end m-0"></i>
