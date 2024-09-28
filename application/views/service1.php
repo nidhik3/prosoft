@@ -1,5 +1,12 @@
 
 <link rel="stylesheet" href="assets/css/ncss.css">
+<style>
+    .about i{
+        font-size: 48px;
+    margin-top: 15px;
+    color: #f39e7a;
+    }
+</style>
 <section id="services" class="services">
         <div class="container">
 

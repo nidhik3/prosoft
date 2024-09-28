@@ -348,24 +348,21 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 </section>
 <section class="top1" style="background-color: #223A51;">
   <div class="" style="max-width: 90%;margin:auto;">
-    <div class="row">
-      <div class="col-md-12">
+    <div class="row d-flex justify-content-around">
+      <div class="col-md-3">
         <h1 style="color: #fff;font-weight:800;">65</h1>
         <h4 style="color: #fff;font-weight:500;">Happy Clients</h4>
       </div>
-      <div class="col-md-12 mt-5">
+      <div class="col-md-3 ">
         <h1 style="color: #fff;font-weight:800;">85</h1>
         <h4 style="color: #fff;font-weight:500;">Projects</h4>
       </div>
-      <div class="col-md-12 mt-5">
+      <div class="col-md-3 ">
         <h1 style="color: #fff;font-weight:800;">18</h1>
         <h4 style="color: #fff;font-weight:500;">Years of <br>
           experience</h4>
       </div>
-      <div class="col-md-12 mt-5">
-        <h1 style="color: #fff;font-weight:800;">15</h1>
-        <h4 style="color: #fff;font-weight:500;">Team Members</h4>
-      </div>
+      
     </div>
 
   </div>
@@ -495,14 +492,14 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
   <div class="conn" style="padding-left:10%;">
     <img src="assets/img/vall.png" alt="" width="100%">
   </div>
-  <div class="container">
+  <!-- <div class="container">
     <div class="row">
       <div class="col-md-12">
         <p class="v-heading">Value Proposition</p>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-7">
+      <div class="col-md-7" >
         <ul class="list">
           <li><img src="assets/image/tick.png" alt="">High return on investment with low total cost of ownership</li>
           <li><img src="assets/image/tick.png" alt="">Solutions to strengthen core functions for greater impact</li>
@@ -515,7 +512,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
         <img src="assets/image/value.png" alt="">
       </div>
     </div>
-  </div>
+  </div> -->
 </section>
 
 <script>
