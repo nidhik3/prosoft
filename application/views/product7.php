@@ -4,7 +4,7 @@
             <p style="font-size: 18px;" class="tm-margin-b-20">
                 ANGLEPRO CSMS provides the platform to submit the electronic claims to Insurance and other third parties with following features.</p>
             <br><br>
-            <div class="row" style="   ">
+            <div class="row" >
                 <div class="col-md-6">
                     <p><span style="font-weight: 800;font-size: 1.8em; line-height: 1">→</span> Create the new claims</p>
                     <p><span style="font-weight: 800;font-size: 1.8em; line-height: 1">→</span> Audit the claims.</p>

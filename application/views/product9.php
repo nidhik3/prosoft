@@ -4,7 +4,7 @@
             <p style="font-size: 18px;" class="tm-margin-b-20">
                 PROSOFT provides the different kind of Mobile application and solutions which helps customer to perform.</p>
             <br><br>
-            <div class="row" style="   ">
+            <div class="row" >
                 <div class="col-md-6">
                     <p><span style="font-weight: 800;font-size: 1.8em; line-height: 1">→</span> Book Appointments</p>
                     <p><span style="font-weight: 800;font-size: 1.8em; line-height: 1">→</span> Payments Options</p>
